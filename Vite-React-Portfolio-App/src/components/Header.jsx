@@ -1,10 +1,8 @@
-function Header() {
-  const name = "Tanka Nath Sharma";
-  const profession = "Full Stack Developer";
+function Header(props) {
   return (
     <header className="header">
-      <h1>{name}</h1>
-      <p>{profession}</p>
+      <h1>{props.name}</h1>
+      <p>{props.profession}</p>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>

@@ -1,5 +1,9 @@
 import "./App.css";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import ProjectList from "./components/ProjectList";
 
 function App() {
   const name = "Tanka Nath Sharma";
@@ -20,47 +24,15 @@ function App() {
   return (
     <div>
       {/* Header section here */}
-      <Header />
+      <Header name={name} profession={profession} />
       {/* About section */}
-      <section id="about" className="about-section">
-        <h2>About Me</h2>
-        <p>
-          Hello! I'm {name}, a passionate {profession} with experience in
-          building web applications.
-        </p>
-      </section>
-
+      <About name={name} profession={profession} />
       {/* Project section */}
-      <section id="projects" className="projects-section">
-        <h2>Projects</h2>
-        <div className="projects-list">
-          {projects.map((project, index) => (
-            <div key={index} className="project-item">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                View Project
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      <ProjectList project_list={projects} />
       {/* Contact section */}
-      <section id="contact" className="contact-section">
-        <h2>Contact Me</h2>
-        <p>
-          Feel free to reach out via email at{" "}
-          <a href="mailto:sharma.tankanath@gmail.com">
-            sharma.tankanath@gmail.com
-          </a>
-        </p>
-      </section>
-
+      <Contact />
       {/* Footer section */}
-      <footer className="footer">
-        <p> All Rights Reserved @2025</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
