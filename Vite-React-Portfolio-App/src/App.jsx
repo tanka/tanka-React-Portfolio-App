@@ -1,4 +1,5 @@
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   const name = "Tanka Nath Sharma";
@@ -19,16 +20,7 @@ function App() {
   return (
     <div>
       {/* Header section here */}
-      <header className="header">
-        <nav>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <h1>{name}</h1>
-        <p>{profession}</p>
-      </header>
-
+      <Header />
       {/* About section */}
       <section id="about" className="about-section">
         <h2>About Me</h2>
